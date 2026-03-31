@@ -1,0 +1,13 @@
+node_modules
+.next
+out
+build
+venv
+*.pyc
+__pycache__
+.env
+.env.local
+.git
+README.md
+docker-compose.yml
+Dockerfile

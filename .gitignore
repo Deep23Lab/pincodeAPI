@@ -1,0 +1,21 @@
+# Dependencies 
+node_modules/
+venv/
+__pycache__/
+*.pyc 
+
+# Local envs 
+.env
+.env.local 
+.env.*.local 
+
+# Secrets 
+firebase-key.json
+serviceAccountKey.json 
+*.pem 
+
+# Logs 
+logs/
+
+# Docker 
+docker-compose.override.yml

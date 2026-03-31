@@ -1,0 +1,18 @@
+# version: '3.8' (obsolete in modern Docker Compose)
+
+services:
+  backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: ptron_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/firebase-key.json:/app/firebase-key.json # Mount the key if locally present
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/firebase-key.json
+      - GOOGLE_SHEET_ID=${GOOGLE_SHEET_ID}
+      - FIREBASE_PROJECT_ID=${FIREBASE_PROJECT_ID}
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+    restart: always
