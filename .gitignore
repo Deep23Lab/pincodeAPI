@@ -10,7 +10,6 @@ __pycache__/
 .env.*.local 
 
 # Secrets 
-firebase-key.json
 serviceAccountKey.json 
 *.pem 
 
