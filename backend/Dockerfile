@@ -27,5 +27,5 @@ ENV GOOGLE_APPLICATION_CREDENTIALS=/app/firebase-key.json
 # Expose port 
 EXPOSE 8000
 
-# Run uvicorn 
-CMD ["python", "-m", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Run uvicorn (Shell form allows environment variables like $PORT)
+CMD python -m uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}
